@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+---
+
+## Local auth setup & testing ⚙️
+
+- Set environment variables in `.env.local`:
+  - `MONGODB_URI` — your MongoDB connection string
+  - `NEXTAUTH_SECRET` — a random secret (e.g. `openssl rand -base64 32`)
+  - `NEXTAUTH_URL` — e.g. `http://localhost:3000`
+
+- Start the dev server: `npm run dev`
+
+- Visit `/register` to create an account, or `/login` to sign in.
+
+- After signup, the app attempts to sign you in automatically and redirects to `/dashboard`.
+
+If you run into issues, check the terminal for server errors or the browser console for client-side errors.
